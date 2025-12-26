@@ -29,9 +29,9 @@
 \section{\faCogs\ IT 技能}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
-  \item 掌握C++11，并熟悉C++14/17/20新特性；了解Python、Golang、Java
-  \item 熟悉Linux环境下的Socket编程、高性能网络开发模型
-  \item 熟悉Redis的基本用法，理解其常见数据类型、持久化、分布式锁等；掌握MySQL的增删改查操作，理解事务、索引、锁机制等
+  \item 掌握C++11，并熟悉C++14/17/20常见的新特性；了解Golang、Python等其他编程语言
+  \item 熟悉HTTP、TCP、UDP等常见网络协议，了解Linux环境下的Socket编程、高性能网络开发模型
+  \item 熟悉Redis的基本用法，理解其常见数据类型、分布式锁等；掌握MySQL的增删改查操作，了解事务、索引等
   \item 熟悉STL中vector、map、set等常见容器的源码；了解常见的设计模式
   % \item 会使用C++相关的编译构建工具、调试工具等
 \end{itemize}
@@ -42,7 +42,7 @@
 以muduo库作为蓝本，使用Epoll的ET模式取代原有的LT模式；在此基础上实现了包含基于Radix Tree的HTTP路由机制、AOP中间件机制和数据库连接池的后端Web框架的开发；使用C++20引入的协程机制提升Web框架业务处理的并发能力。
 \begin{itemize}
   \item 将muduo库中的Epoll的LT模式重构为ET模式，减少系统调用次数，提升高并发下的吞吐量。
-  \item 设计并实现了基于Radix Tree的HTTP路由分发机制，在路径查找时间复杂度上优于传统的正则匹配或哈希表查找；实现了基于责任链模式的中间件机制，支持全局与路由组级别的切面处理（日志、鉴权等）；集成MySQL连接池和Redis连接池。
+  \item 设计并实现了基于Radix Tree的HTTP路由分发机制，在路径查找时间复杂度上优于传统的正则匹配或哈希表查找；实现了基于责任链模式的中间件机制，支持全局与路由组级别的切面处理（日志、鉴权等）；集成MySQL连接池。
   \item 除了引入业务线程池避免阻塞IO操作，还引入了C++20的协程机制，并实现了协程调度器以提升业务处理的并发能力。
   \item 使用对象池解决业务处理过程中频繁的堆分配开销。
 \end{itemize}
